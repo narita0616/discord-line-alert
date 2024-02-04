@@ -14,7 +14,9 @@ const getJoinVC = (client, sendLineMessage) => {
       try {
         res = await guild.channels.fetch(newState.channelId);
       } catch {
-        console.log("メンバー取得ミス");
+        console.log(
+          "error: チャンネルへ参加しているユーザーを正しく取得できませんでした"
+        );
         return;
       }
 
