@@ -1,4 +1,9 @@
 const { discord, line } = require("./modules/index");
+require("dotenv").config();
 
-const { sendMessage } = line();
-discord(sendMessage);
+const index = async () => {
+  const { sendMessage } = await line();
+  discord(sendMessage);
+};
+
+index();
